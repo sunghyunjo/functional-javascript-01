@@ -5,14 +5,17 @@
 - for of
 
 <script>
+  /* ES6 이전 */
   const list = [1, 2, 3];
   for (var i = 0; i < list.length; i++) {
     // log(list[i]);
   }
-  const str = 'abc';
+  const str = 'abc'; // 유사배열
   for (var i = 0; i < str.length; i++) {
     // log(str[i]);
   }
+  
+  /* ES6 */
   for (const a of list) {
     // log(a);
   }
