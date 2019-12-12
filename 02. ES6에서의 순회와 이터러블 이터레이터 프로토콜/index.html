@@ -47,7 +47,7 @@
   log('Map -----------');
   const map = new Map([['a', 1], ['b', 2], ['c', 3]]);
   for (const a of map.keys()) log(a);
-  for (const a of map.values()) log(a);
+  for (const a of map.values()) log(a); // Map.values() -> iterator
   for (const a of map.entries()) log(a);
   console.clear();
 </script>
@@ -76,14 +76,14 @@
   let iterator = iterable[Symbol.iterator]();
   iterator.next();
   iterator.next();
-  // log(iterator.next());
+  // log(iterator.next()); 
   // log(iterator.next());
   // log(iterator.next());
   for (const a of iterator) log(a);
 
   // const arr2 = [1, 2, 3];
   // let iter2 = arr2[Symbol.iterator]();
-  // iter2.next();
+  // iter2.next(); // {value: 1, done: false}이 출력됨
   // log(iter2[Symbol.iterator]() == iter2);
   // for (const a of iter2) log(a);
 
